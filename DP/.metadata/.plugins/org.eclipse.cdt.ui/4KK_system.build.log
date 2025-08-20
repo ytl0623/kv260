@@ -1,0 +1,10 @@
+11:10:39 **** Incremental Build of configuration Hardware for project 4KK_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 59244 C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_psu_cortexa53_0 C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/4KK_system/Hardware/system.bif
+sdcard_gen --xpfm C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/4KK_system/Hardware/system.bif --bitstream C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/4KK/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/4KK/Debug/4KK.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/4KK/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen -arch zynqmp -image C:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/4KK_system/Hardware/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+11:10:46 Build Finished (took 7s.381ms)
+

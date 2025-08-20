@@ -1,0 +1,10 @@
+13:34:15 **** Build of configuration Debug for project led0814_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 53168 C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/export/led/led.xpfm standalone_domain C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led0814_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/export/led/led.xpfm --sys_config led --bif C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led0814_system/Debug/system.bif --bitstream C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led0814/_ide/bitstream/top.bit --elf C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led0814/Debug/led0814.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led0814/_ide/bitstream/top.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen -arch zynqmp -image C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led0814_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+13:34:27 Build Finished (took 11s.981ms)
+

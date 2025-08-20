@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xv_tpg.h"
+#include "xvtc.h"
+#include "xvidc.h"
+#include "xdpdma_video_example.h" //change according to your file name
+
+XV_tpg tpg;
+XVtc vtc;
+XVtc_Config *vtc_config;
+
+void driverInit() {
+
+	XV_tpg_Initialize(&tpg, 0);
+
+	vtc_config = XVtc_LookupConfig(XPAR_VTC_0_DEVICE_ID);
+
+	XVtc_CfgInitialize(&vtc, vtc_config, vtc_config->BaseAddress);
+
+}
+void ConfigVtc(XVidC_VideoStream *StreamPtr) {
+	XVtc_Timing vtc_timing = { 0 };
+	u16 PixelsPerClock = 1;
+
+	vtc_timing.HActiveVideo = StreamPtr->Timing.HActive / PixelsPerClock;
+	vtc_timing.HFrontPorch = StreamPtr->Timing.HFrontPorch / PixelsPerClock;
+	vtc_timing.HSyncWidth = StreamPtr->Timing.HSyncWidth / PixelsPerClock;
+	vtc_timing.HBackPorch = StreamPtr->Timing.HBackPorch / PixelsPerClock;
+	vtc_timing.HSyncPolarity = StreamPtr->Timing.HSyncPolarity;
+	vtc_timing.VActiveVideo = StreamPtr->Timing.VActive;
+	vtc_timing.V0FrontPorch = StreamPtr->Timing.F0PVFrontPorch;
+	vtc_timing.V0SyncWidth = StreamPtr->Timing.F0PVSyncWidth;
+	vtc_timing.V0BackPorch = StreamPtr->Timing.F0PVBackPorch;
+	vtc_timing.VSyncPolarity = StreamPtr->Timing.VSyncPolarity;
+	XVtc_SetGeneratorTiming(&vtc, &vtc_timing);
+	XVtc_Enable(&vtc);
+	XVtc_EnableGenerator(&vtc);
+	XVtc_RegUpdateEnable(&vtc);
+
+}
+void ConfigTpg(XVidC_VideoStream *StreamPtr) {
+	XV_tpg_DisableAutoRestart(&tpg);
+	XV_tpg_Set_height(&tpg, StreamPtr->Timing.VActive);
+	XV_tpg_Set_width(&tpg, StreamPtr->Timing.HActive);
+	XV_tpg_Set_colorFormat(&tpg, XVIDC_CSF_RGB);
+	XV_tpg_Set_bckgndId(&tpg, XTPG_BKGND_COLOR_BARS);
+	XV_tpg_Set_ovrlayId(&tpg, 1);
+	XV_tpg_Set_boxSize(&tpg, 100);
+	XV_tpg_Set_motionSpeed(&tpg, 10);
+	XV_tpg_EnableAutoRestart(&tpg);
+	XV_tpg_Start(&tpg);
+}
+int main() {
+	init_platform();
+	print("---------------------------------\n\r");
+	print("----------KV260 4K TPG-----------\n\r");
+	print("---------------------------------\n\r");
+
+	XVidC_VideoTiming const *TimingPtr;
+	XVidC_VideoMode TestModes[2] = { XVIDC_VM_1080_60_P, XVIDC_VM_UHD_30_P };
+	XVidC_VideoStream VidStream;
+
+	/*Set stream parameters*/
+	VidStream.PixPerClk = tpg.Config.PixPerClk;
+	VidStream.ColorFormatId = XVIDC_CSF_RGB;
+	VidStream.ColorDepth = tpg.Config.MaxDataWidth;
+	VidStream.VmId = TestModes[1];
+	print(TestModes[1]) ;
+	TimingPtr = XVidC_GetTimingInfo(VidStream.VmId);
+	VidStream.Timing = *TimingPtr;
+	VidStream.FrameRate = XVidC_GetFrameRate(VidStream.VmId);
+
+	xil_printf("\r\n********************************************\r\n");
+	xil_printf("Test Input Stream: %s (%s)\r\n",
+			XVidC_GetVideoModeStr(VidStream.VmId),
+			XVidC_GetColorFormatStr(VidStream.ColorFormatId));
+	xil_printf("********************************************\r\n");
+
+	driverInit();
+
+	ConfigTpg(&VidStream);
+
+	ConfigVtc(&VidStream);
+
+	run_dppsu();
+
+	cleanup_platform();
+	return 0;
+}

@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Aug 20 10:50:16 2025
+# Process ID: 65580
+# Current directory: C:/Users/mini_pc1/Desktop/canliu/kv260/hello_world_vivado/hello_world
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent115912 C:\Users\mini_pc1\Desktop\canliu\kv260\hello_world_vivado\hello_world\hello_world.xpr
+# Log file: C:/Users/mini_pc1/Desktop/canliu/kv260/hello_world_vivado/hello_world/vivado.log
+# Journal file: C:/Users/mini_pc1/Desktop/canliu/kv260/hello_world_vivado/hello_world\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mini_pc1/Desktop/canliu/kv260/hello_world_vivado/hello_world/hello_world.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/mini_pc1/Desktop/canliu/hello_world_vivado/hello_world' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:17 . Memory (MB): peak = 1238.457 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/mini_pc1/Desktop/canliu/kv260/hello_world_vivado/hello_world/hello_world.srcs/sources_1/bd/system/system.bd}
+Reading block design file <C:/Users/mini_pc1/Desktop/canliu/kv260/hello_world_vivado/hello_world/hello_world.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_2
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_3
+Adding component instance block -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from block design file <C:/Users/mini_pc1/Desktop/canliu/kv260/hello_world_vivado/hello_world/hello_world.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1238.457 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 20 11:06:03 2025...

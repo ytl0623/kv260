@@ -1,0 +1,27 @@
+Nothing to build in platform '0814'
+
+11:29:11 **** Incremental Build of configuration Release for project led ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/0814/export/0814/sw/0814/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: led.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/0814/export/0814/sw/0814/standalone_domain/bsplib/lib -o "led.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size led.elf  |tee "led.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29848	   2048	  20676	  52572	   cd5c	led.elf
+'Finished building: led.elf.size'
+' '
+11:29:12 **** Incremental Build of configuration Release for project led_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 64937 C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/0814/export/0814/0814.xpfm standalone_domain C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led_system/Release/system.bif
+sdcard_gen --xpfm C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/0814/export/0814/0814.xpfm --sys_config 0814 --bif C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led_system/Release/system.bif --bitstream C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/_ide/bitstream/top.bit --elf C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/Release/led.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/_ide/bitstream/top.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen -arch zynqmp -image C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led_system/Release/sd_card_temp/boot.bif -w -o i BOOT.BIN

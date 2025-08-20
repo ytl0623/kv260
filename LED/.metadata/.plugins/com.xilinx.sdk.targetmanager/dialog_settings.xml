@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Xilinx X-MLCC-01 XFL1BQ4D12UWA&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-X-MLCC-01-XFL1BQ4D12UWA-04724093-0&quot;,&quot;3&quot;:&quot;jsn-X-MLCC-01-XFL1BQ4D12UWA-5ba00477-0&quot;}}]}"/>
+	<item key="123_system-bitFile" value="${project_loc:123}/_ide/bitstream/top.bit"/>
+	<item key="123_system-bmmFile" value=""/>
+	<item key="123_system-target" value="Local"/>
+	<item key="123_system-device" value="Auto Detect"/>
+	<item key="123_system-partial_bit" value="false"/>
+	<item key="123_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="123_system"/>
+</section>

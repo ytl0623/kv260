@@ -1,0 +1,10 @@
+16:46:46 **** Incremental Build of configuration Hardware for project DP_App_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 58285 C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP260/export/DP260/DP260.xpfm standalone_domain C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP_App_system/Hardware/system.bif
+sdcard_gen --xpfm C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP260/export/DP260/DP260.xpfm --sys_config DP260 --bif C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP_App_system/Hardware/system.bif --bitstream C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP_App/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP_App/Debug/DP_App.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP_App/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen -arch zynqmp -image C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/DP_App_system/Hardware/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:46:55 Build Finished (took 8s.664ms)
+

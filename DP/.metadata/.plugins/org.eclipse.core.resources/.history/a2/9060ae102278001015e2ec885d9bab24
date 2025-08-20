@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="DP_App" location="C:/Users/repair/Documents/FPGA/KV260_DP/DP_App" platform="C:/Users/repair/Documents/FPGA/KV260_DP/DP260/export/DP260/DP260.xpfm" platformUID="xilinx:kv260_som240_1_connector_som240_som240_1_connector:KV260DP:0.0(custom)" systemProject="DP_App_system" sysConfig="DP260" runtime="C/C++" cpu="standalone_domain" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="21a1868d9773354bc34c92f1ae15b309">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1564558790">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.351832802" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

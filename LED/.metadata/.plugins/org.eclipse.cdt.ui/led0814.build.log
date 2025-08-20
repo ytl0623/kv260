@@ -1,0 +1,26 @@
+13:34:12 **** Build of configuration Debug for project led0814 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/export/led/sw/led/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/export/led/sw/led/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: led0814.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led/export/led/sw/led/standalone_domain/bsplib/lib -o "led0814.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led0814.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size led0814.elf  |tee "led0814.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30212	   2048	  20676	  52936	   cec8	led0814.elf
+'Finished building: led0814.elf.size'
+' '
+
+13:34:14 Build Finished (took 2s.622ms)
+

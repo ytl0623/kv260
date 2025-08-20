@@ -1,0 +1,20 @@
+Nothing to build in platform 'kv260'
+
+15:20:09 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/mini_pc1/Desktop/canliu/hello_world_vitis/kv260/export/kv260/sw/kv260/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/mini_pc1/Desktop/canliu/hello_world_vitis/kv260/export/kv260/sw/kv260/standalone_psu_cortexa53_0/bsplib/lib -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30212	   2048	  20676	  52936	   cec8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '

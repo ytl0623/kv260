@@ -1,0 +1,21 @@
+11:10:37 **** Incremental Build of configuration Debug for project 4KK ****
+make all 
+'Building file: ../src/xdpdma_video_example.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xdpdma_video_example.o" -IC:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/xdpdma_video_example.d" -MT"src/xdpdma_video_example.o" -o "src/xdpdma_video_example.o" "../src/xdpdma_video_example.c"
+'Finished building: ../src/xdpdma_video_example.c'
+' '
+'Building target: 4KK.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/mini_pc1/Desktop/canliu/kv260/4k_vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bsplib/lib -o "4KK.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o ./src/xdpdma_video_example.o ./src/xdppsu_interrupt.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 4KK.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size 4KK.elf  |tee "4KK.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 109404	   5272	8323060	8437736	 80bfe8	4KK.elf
+'Finished building: 4KK.elf.size'
+' '
+
+11:10:38 Build Finished (took 909ms)
+

@@ -1,0 +1,26 @@
+15:40:11 **** Build of configuration Release for project 123 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top/sw/top/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top/sw/top/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: 123.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top/sw/top/standalone_psu_cortexa53_0/bsplib/lib -o "123.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 123.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size 123.elf  |tee "123.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34908	   2200	  20772	  57880	   e218	123.elf
+'Finished building: 123.elf.size'
+' '
+
+15:40:12 Build Finished (took 1s.508ms)
+

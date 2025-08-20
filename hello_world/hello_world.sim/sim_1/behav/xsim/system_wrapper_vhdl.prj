@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../hello_world.ip_user_files/bd/system/ip/system_proc_sys_reset_0_0/sim/system_proc_sys_reset_0_0.vhd" \
+"../../../../hello_world.ip_user_files/bd/system/ip/system_proc_sys_reset_1_0/sim/system_proc_sys_reset_1_0.vhd" \
+"../../../../hello_world.ip_user_files/bd/system/ip/system_proc_sys_reset_2_0/sim/system_proc_sys_reset_2_0.vhd" \
+"../../../../hello_world.ip_user_files/bd/system/ip/system_axi_intc_0_0/sim/system_axi_intc_0_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,21 @@
+11:29:11 **** Incremental Build of configuration Release for project led ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/0814/export/0814/sw/0814/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: led.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/0814/export/0814/sw/0814/standalone_domain/bsplib/lib -o "led.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size led.elf  |tee "led.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29848	   2048	  20676	  52572	   cd5c	led.elf
+'Finished building: led.elf.size'
+' '
+
+11:29:12 Build Finished (took 802ms)
+

@@ -1,0 +1,15 @@
+timestamp=[2025-07-28 13:59:43], mode=WORKBENCH_START, duration=0:00:10.089, duration_ms=10089, data={}
+timestamp=[2025-07-28 13:59:44], mode=WORKBENCH_UI_INIT, duration=0:00:00.929, duration_ms=929, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-07-28 13:59:46], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.121, duration_ms=121, data={}
+timestamp=[2025-07-28 14:03:22], mode=APP_CREATION, duration=0:00:41.038, duration_ms=41038, data={name=hello_world, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=kv260, application_type=application}
+timestamp=[2025-07-28 14:05:58], mode=PLATFORM_GENERATION, duration=0:01:53.819, duration_ms=113819, data={name=kv260}
+timestamp=[2025-07-28 14:06:00], mode=BUILD, duration=0:00:02.261, duration_ms=2261, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2025-07-28 14:06:01], mode=BUILD, duration=0:00:00.252, duration_ms=252, data={name=hello_world_system, configuration=Emulation-SW, clean_build=false}
+timestamp=[2025-07-28 14:33:04], mode=BUILD, duration=0:00:02.058, duration_ms=2058, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2025-07-28 14:33:13], mode=BUILD, duration=0:00:08.621, duration_ms=8621, data={name=hello_world_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-07-28 15:09:37], mode=BUILD, duration=0:00:03.308, duration_ms=3308, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2025-07-28 15:09:50], mode=BUILD, duration=0:00:12.071, duration_ms=12071, data={name=hello_world_system, configuration=Hardware, clean_build=false}
+timestamp=[2025-07-28 15:20:10], mode=BUILD, duration=0:00:00.969, duration_ms=969, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2025-07-29 15:00:52], mode=WORKBENCH_START, duration=0:00:12.901, duration_ms=12901, data={}
+timestamp=[2025-07-29 15:00:53], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.236, duration_ms=236, data={}
+timestamp=[2025-07-29 15:00:53], mode=WORKBENCH_UI_INIT, duration=0:00:01.423, duration_ms=1423, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,kv260}

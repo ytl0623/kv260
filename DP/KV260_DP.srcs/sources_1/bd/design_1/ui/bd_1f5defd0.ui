@@ -1,0 +1,50 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.7",
+   "Default View_TopLeft":"0,-3",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 5 -x 1590 -y 610 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 650 -y 1050 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 6 -x 2130 -y 200 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 5 -x 1590 -y 130 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 5 -x 1590 -y 360 -defaultsOSRD
+preplace inst v_tpg_0 -pg 1 -lvl 4 -x 980 -y 750 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 1 -x 190 -y 440 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 4 -x 980 -y 480 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 440 -y 870 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 4 -x 980 -y 200 -defaultsOSRD
+preplace netloc Net 1 2 4 530 180 770 80 1210 260 1920
+preplace netloc axi_intc_0_irq 1 1 5 330 10 NJ 10 NJ 10 1150J 40 1940
+preplace netloc clk_wiz_0_clk_out1 1 0 6 50 280 NJ 280 N 280 760 90 1200 230 1970
+preplace netloc clk_wiz_0_clk_out2 1 3 3 750J 70 1220 250 1930
+preplace netloc clk_wiz_0_clk_out3 1 0 5 60 290 NJ 290 N 290 740 860 1230
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 6 20 50 N 50 N 50 N 50 1230 220 1960
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 3 3 790 100 1160 240 1940J
+preplace netloc v_axi4s_vid_out_0_sof_state_out 1 0 5 60 960 NJ 960 NJ 960 NJ 960 1200
+preplace netloc v_axi4s_vid_out_0_vid_active_video 1 4 1 1190 390n
+preplace netloc v_axi4s_vid_out_0_vid_data 1 4 1 1160 410n
+preplace netloc v_axi4s_vid_out_0_vid_hsync 1 4 1 1180 430n
+preplace netloc v_axi4s_vid_out_0_vid_vsync 1 4 1 1170 450n
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 0 5 30 60 NJ 60 N 60 NJ 60 1150
+preplace netloc v_tc_0_irq 1 1 1 320 440n
+preplace netloc v_tpg_0_interrupt 1 1 4 340 950 NJ 950 NJ 950 1150
+preplace netloc xlconcat_0_dout 1 2 3 NJ 870 NJ 870 1240
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 2 4 540 850 NJ 850 NJ 850 1920
+preplace netloc axi_interconnect_0_M00_AXI 1 4 3 1240 10 NJ 10 2300
+preplace netloc axi_interconnect_0_M01_AXI 1 0 7 40 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 2290
+preplace netloc axi_interconnect_0_M02_AXI 1 3 4 780 30 NJ 30 NJ 30 2280
+preplace netloc v_tc_0_vtiming_out 1 1 3 N 420 N 420 NJ
+preplace netloc v_tpg_0_m_axis_video 1 3 2 800 840 1170
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 5 1 1950 100n
+levelinfo -pg 1 0 190 440 650 980 1590 2130 2320
+pagesize -pg 1 -db -bbox -sgen 0 0 2320 1150
+"
+}
+{
+   "da_axi4_cnt":"5",
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"20",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

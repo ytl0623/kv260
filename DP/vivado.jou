@@ -1,0 +1,172 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Aug 14 13:05:50 2025
+# Process ID: 19844
+# Current directory: C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20744 C:\Users\mini_pc1\Desktop\canliu\KV260_DP_1\KV260_DP\KV260_DP.xpr
+# Log file: C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/vivado.log
+# Journal file: C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/KV260_DP.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/KV260_DP.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/mini_pc1/Desktop/canliu/KV260_DP_1/KV260_DP/KV260_DP.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+create_project 4K C:/Users/mini_pc1/Desktop/canliu/kv260/4K -part xck26-sfvc784-2LV-c
+set_property board_part xilinx.com:kv260:part0:1.1 [current_project]
+set_property board_connections {som240_1_connector xilinx.com:som240:som240_1_connector:1.0} [current_project]
+set_property platform.extensible true [current_project]
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.3 zynq_ultra_ps_e_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
+set_property -dict [list CONFIG.PSU__USE__VIDEO {1}] [get_bd_cells zynq_ultra_ps_e_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_USED {true} CONFIG.CLK_OUT2_PORT {clk_300} CONFIG.CLK_OUT3_PORT {clk_297} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {300} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {297} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.MMCM_CLKOUT1_DIVIDE {4} CONFIG.MMCM_CLKOUT2_DIVIDE {4} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT2_JITTER {94.862} CONFIG.CLKOUT2_PHASE_ERROR {87.180} CONFIG.CLKOUT3_JITTER {94.862} CONFIG.CLKOUT3_PHASE_ERROR {87.180}] [get_bd_cells clk_wiz_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_tpg:8.1 v_tpg_0
+endgroup
+set_property -dict [list CONFIG.DISPLAY_PORT {1}] [get_bd_cells v_tpg_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.2 v_tc_0
+endgroup
+set_property -dict [list CONFIG.max_clocks_per_line {8192} CONFIG.GEN_F0_VSYNC_HSTART {695} CONFIG.enable_detection {false}] [get_bd_cells v_tc_0]
+set_property -dict [list CONFIG.VIDEO_MODE {1080p} CONFIG.GEN_F0_VSYNC_VSTART {1083} CONFIG.GEN_F1_VSYNC_VSTART {1083} CONFIG.GEN_HACTIVE_SIZE {1920} CONFIG.GEN_HSYNC_END {2052} CONFIG.GEN_HFRAME_SIZE {2200} CONFIG.GEN_F0_VSYNC_HSTART {1004} CONFIG.GEN_F1_VSYNC_HSTART {1004} CONFIG.GEN_F0_VSYNC_HEND {1004} CONFIG.GEN_F1_VSYNC_HEND {1004} CONFIG.GEN_F0_VFRAME_SIZE {1125} CONFIG.GEN_F1_VFRAME_SIZE {1125} CONFIG.GEN_F0_VSYNC_VEND {1088} CONFIG.GEN_F1_VSYNC_VEND {1088} CONFIG.GEN_F0_VBLANK_HEND {960} CONFIG.GEN_F1_VBLANK_HEND {960} CONFIG.GEN_HSYNC_START {2008} CONFIG.GEN_VACTIVE_SIZE {1080} CONFIG.GEN_F0_VBLANK_HSTART {960} CONFIG.GEN_F1_VBLANK_HSTART {960}] [get_bd_cells v_tc_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_0
+endgroup
+connect_bd_net [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
+startgroup
+set_property -dict [list CONFIG.C_NATIVE_COMPONENT_WIDTH {12} CONFIG.C_HAS_ASYNC_CLK {1}] [get_bd_cells v_axi4s_vid_out_0]
+endgroup
+set_property location {2.5 531 -90} [get_bd_cells v_axi4s_vid_out_0]
+connect_bd_net [get_bd_pins v_axi4s_vid_out_0/vid_active_video] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_de]
+connect_bd_net [get_bd_pins v_axi4s_vid_out_0/vid_data] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_pixel1]
+connect_bd_net [get_bd_pins v_axi4s_vid_out_0/vid_hsync] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_hsync]
+connect_bd_net [get_bd_pins v_axi4s_vid_out_0/vid_vsync] [get_bd_pins zynq_ultra_ps_e_0/dp_live_video_in_vsync]
+connect_bd_intf_net [get_bd_intf_pins v_tpg_0/m_axis_video] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins v_tc_0/s_axi_aclk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_300] [get_bd_pins v_tpg_0/ap_clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_300] [get_bd_pins v_axi4s_vid_out_0/aclk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_297] [get_bd_pins v_tc_0/clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_297] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_297] [get_bd_pins zynq_ultra_ps_e_0/dp_video_in_clk]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {/zynq_ultra_ps_e_0/dp_video_ref_clk (300 MHz)} Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/clk_in1]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out1 (100 MHz)} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/v_tc_0/ctrl} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins v_tc_0/ctrl]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_300 (300 MHz)} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/v_tpg_0/s_axi_CTRL} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins v_tpg_0/s_axi_CTRL]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_100M/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_0_300M/ext_reset_in]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/clk_wiz_0/clk_out1 (100 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/v_tc_0/ctrl} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+endgroup
+validate_bd_design
+validate_bd_design
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk]
+validate_bd_design
+regenerate_bd_layout
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+set_property location {6 1900 739} [get_bd_cells ila_0]
+delete_bd_objs [get_bd_cells ila_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0
+endgroup
+set_property location {6 1967 758} [get_bd_cells system_ila_0]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_297] [get_bd_pins system_ila_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (100 MHz)} Clk_slave {/clk_wiz_0/clk_out1 (100 MHz)} Clk_xbar {/clk_wiz_0/clk_out1 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/v_tc_0/ctrl} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+current_project KV260_DP
+regenerate_bd_layout
+current_project 4K
+regenerate_bd_layout
+current_project KV260_DP
+current_project 4K
+regenerate_bd_layout
+current_project KV260_DP
+regenerate_bd_layout
+startgroup
+current_project 4K
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {1.5 161 -236} [get_bd_cells xlconcat_0]
+set_property location {1 127 69} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
+connect_bd_net [get_bd_pins v_tc_0/irq] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins v_tpg_0/interrupt] [get_bd_pins xlconcat_0/In0]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.PSU__USE__M_AXI_GP1 {0}] [get_bd_cells zynq_ultra_ps_e_0]
+delete_bd_objs [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM1_FPD]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {2}] [get_bd_cells ps8_0_axi_periph]
+endgroup
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets zynq_ultra_ps_e_0_dp_video_ref_clk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins clk_wiz_0/clk_in1]
+regenerate_bd_layout
+regenerate_bd_layout
+connect_bd_net [get_bd_pins v_tc_0/sof_state] [get_bd_pins v_axi4s_vid_out_0/sof_state_out]
+connect_bd_intf_net [get_bd_intf_pins v_tc_0/vtiming_out] [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in]
+connect_bd_net [get_bd_pins rst_clk_wiz_0_300M/peripheral_aresetn] [get_bd_pins v_axi4s_vid_out_0/aresetn]
+startgroup
+connect_bd_net -net locked [get_bd_pins v_axi4s_vid_out_0/locked]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {locked }]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets locked] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_297" SYSTEM_ILA "Auto" } \
+                                                         ]
+undo
+regenerate_bd_layout
+delete_bd_objs [get_bd_cells system_ila_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0
+endgroup
+set_property location {5 1941 538} [get_bd_cells system_ila_0]
+set_property -dict [list CONFIG.C_BRAM_CNT {6} CONFIG.C_MON_TYPE {MIX}] [get_bd_cells system_ila_0]
+connect_bd_net [get_bd_pins v_tc_0/irq] [get_bd_pins system_ila_0/probe0]
+undo
+connect_bd_net [get_bd_pins rst_clk_wiz_0_300M/peripheral_aresetn] [get_bd_pins system_ila_0/resetn]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_300] [get_bd_pins system_ila_0/clk]
+connect_bd_net [get_bd_pins v_axi4s_vid_out_0/underflow] [get_bd_pins system_ila_0/probe0]
+copy_bd_objs /  [get_bd_cells {system_ila_0}]
+set_property location {5 1969 721} [get_bd_cells system_ila_1]
+delete_bd_objs [get_bd_cells system_ila_1]
+delete_bd_objs [get_bd_nets v_axi4s_vid_out_0_underflow] [get_bd_cells system_ila_0]
+delete_bd_objs [get_bd_nets locked]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_0
+endgroup
+current_project KV260_DP
+regenerate_bd_layout
+current_project 4K
+delete_bd_objs [get_bd_cells axis_subset_converter_0]
+regenerate_bd_layout
+make_wrapper -files [get_files C:/Users/mini_pc1/Desktop/canliu/kv260/4K/4K.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse c:/Users/mini_pc1/Desktop/canliu/kv260/4K/4K.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

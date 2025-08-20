@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="123_system-imgFile" value="C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/123_system/Debug/sd_card/BOOT.BIN"/>
+	<item key="123_system-offSet" value=""/>
+	<item key="123_system-initFile" value="C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top/sw/top/boot/fsbl.elf"/>
+	<item key="123_system-flashType" value="qspi-x4-single"/>
+	<item key="123_system-verifyFlash" value="true"/>
+	<item key="123_system-blankCheck" value="false"/>
+	<item key="123_system-device" value="Auto Detect"/>
+	<item key="123_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="123_system"/>
+</section>

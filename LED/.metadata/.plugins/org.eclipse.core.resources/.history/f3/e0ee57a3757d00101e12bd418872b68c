@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="led" location="C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/led" platform="C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/0814/export/0814/0814.xpfm" platformUID="xilinx:kv260::0.0(custom)" systemProject="led_system" sysConfig="0814" runtime="C/C++" cpu="standalone_domain" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="114b5a0bba09c295393a7d2ecf36b479">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.352830552" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.104453118">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

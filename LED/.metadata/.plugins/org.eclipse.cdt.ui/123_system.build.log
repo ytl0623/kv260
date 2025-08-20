@@ -1,0 +1,11 @@
+15:40:13 **** Build of configuration Release for project 123_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 53168 C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top/top.xpfm standalone_psu_cortexa53_0 C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/123_system/Release/system.bif
+sdcard_gen --xpfm C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top/top.xpfm --sys_config top --bif C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/123_system/Release/system.bif --bitstream C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/123/_ide/bitstream/top.bit --elf C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/123/Release/123.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/123/_ide/bitstream/top.bit
+Error intializing SD boot data : Software platform XML error, sdx:qemuArguments value "top/qemu/pmu_args.txt" path does not exist C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top/sw/top/qemu/pmu_args.txt, platform path C:/Users/mini_pc1/Desktop/canliu/kv260/kv260_blinking_led/top/export/top, sdx:configuration top, sdx:image standard
+make: *** [makefile:39: package] Error 1
+
+15:40:19 Build Finished (took 6s.17ms)
+

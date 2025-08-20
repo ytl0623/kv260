@@ -1,0 +1,13 @@
+set_property PACKAGE_PIN H12 [get_ports {led[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
+set_property DRIVE 16 [get_ports {led[0]}]
+
+set_property PACKAGE_PIN E10 [get_ports {led[1]}]
+set_property PACKAGE_PIN E12 [get_ports {led[2]}]
+set_property PACKAGE_PIN B11 [get_ports {led[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
+set_property DRIVE 16 [get_ports {led[1]}]
+set_property DRIVE 16 [get_ports {led[2]}]
+set_property DRIVE 16 [get_ports {led[3]}]
